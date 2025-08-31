@@ -17,10 +17,10 @@ class StartupApiSpider(scrapy.Spider):
         """
         try:
             data = json.loads(response.text)
-            print(f"✅ Successfully loaded {len(data)} startups from API")
+            print(f" Successfully loaded {len(data)} startups from API")
             
         except json.JSONDecodeError as e:
-            print(f"❌ Failed to parse JSON: {e}")
+            print(f" Failed to parse JSON: {e}")
             return
 
         # Process each startup in the JSON data
